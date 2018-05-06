@@ -1,0 +1,108 @@
+/* pages/detail/detail.wxss */
+.productDetail{
+  height:100%;
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+}
+.productInfo{
+  flex: 1;
+}
+.detail{
+  height:681rpx;
+  background: #fff;
+}
+.imgWrap{
+  border-bottom:solid 1rpx #f9c795;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+}
+.imgWrap image{
+  width:98%;
+}
+.tagsWrap{
+  position:absolute;
+  left:0rpx;
+  width:100%;
+  height:50rpx;
+  top:1rpx;
+}
+.tagsWrap text{
+  background:#bda686;
+  height:36rpx;
+  line-height:36rpx;
+  border-radius:36rpx;
+  color:#fff;
+  font-size:18rpx;
+  padding:0 14rpx;
+  margin:0 8rpx;
+}
+.contentWrap{
+  padding:20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.platformPrice{
+  font-size: 36rpx;
+  margin-right:20rpx;
+}
+.jdPrice{
+  font-size: 20rpx;
+  color:#b4b4b4;
+  text-decoration:line-through;
+}
+.name{
+  font-size: 24rpx;
+  color:#292929;
+  margin-bottom: 15rpx;
+}
+.subName{
+  color:#bda686;
+  font-size:24rpx;
+}
+.content{
+  font-size: 23rpx;
+  color:#bda686;
+}
+.footer{
+  height:96rpx;
+  display: flex;
+  line-height: 96rpx;
+}
+.shopCart{
+  flex:1;
+  background: #fff;
+  text-align: center;
+  font-size: 36rpx;
+  color:#181818;
+  position: relative
+}
+.shopCart image{
+  width:55rpx;
+  height:49rpx;
+  margin-right:20rpx;
+}
+.shopCart .number{
+  font-size: 20rpx;
+  color:#fff;
+  line-height:0;
+  position: absolute;
+  top:26rpx;
+  left:85rpx;
+}
+.orders{
+  width:460rpx;
+  background: #181818;
+  text-align: center;
+  font-size: 36rpx;
+  color:#f9c795;
+}
+.detailcontent{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top:20rpx;
+}

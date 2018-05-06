@@ -1,0 +1,37 @@
+<!--pages/detail/detail.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class='productDetail'>
+  <view class='productInfo'>
+    <view class='detail'>
+      <view class='imgWrap'>
+        <view class='tagsWrap'>
+          <text wx:for="{{detail.tags}}" wx:key="tags">{{item}}</text>
+        </view>
+        <image src='{{detail.image1}}'></image>
+      </view>
+      <view class='contentWrap'>
+        <view class='priceInfo'>
+          <text class='platformPrice'>¥{{detail.price}}</text>
+          <text class='jdPrice'>京东价:¥{{detail.price}}</text>
+        </view>
+        <view class='name'>
+          {{detail.name}}
+        </view>
+        <view class='subName'>
+          {{detail.subTitle}}
+        </view>
+      </view>
+    </view>
+    <view class='detailcontent'>
+      <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+    </view>
+  </view>
+  <view class='footer'>
+    <view class='shopCart' bindtap='goCard'>
+      <image src='../../images/shoppingTrolley.png'></image>
+      <text class='number' wx:if="{{number}}">{{number<10?'0'+number:number}}</text>
+      <text>订货车</text>
+    </view>
+    <view class='orders' bindtap='addCart'>订货</view>
+  </view>
+</view>

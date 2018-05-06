@@ -1,0 +1,55 @@
+<!--pages/card/card.wxml-->
+<view class='cardPage'>
+  <scroll-view class='cardList' scroll-y="true">
+    <view wx:for="{{cardList}}" wx:key="cardList" class='listItem {{index==cardList.length-1?"last":""}}'>
+      <view class='imgInfo'>
+        <view class='imageWrap'>
+          <image src='{{item.image}}'></image>
+        </view>
+      </view>
+      <view class='itemInfo'>
+        <view class='name'>{{item.name}}</view>
+        <view class='price'>
+          <text class="priceText">¥{{item.price}}</text>
+          <view class='quantity'><image src='../../images/jian.png' class='' bindtap='lessProduct' data-id="{{item.id}}" data-quantity="{{item.quantity}}"></image><text>{{item.quantity}}</text><image src='../../images/jia.png' bindtap='addProduct' data-id="{{item.id}}" data-quantity="{{item.quantity}}"></image></view>
+          <view class='delete' bindtap='deleteProduct' data-id="{{item.id}}">删除</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class='operating'>
+    <view class='amount'><text>合计：</text> ¥{{amount}}</view>
+    <view class='confirmOrder' bindtap='showModal'>确认下单</view>
+  </view>
+   <view class='popups' wx:if="{{showModal}}">
+    <view class="orderInfo">
+      <view class='infoItem'>
+        <text>请输入地址</text>
+        <input
+          bindinput='addressChange'
+          placeholder='请输入地址'
+          type='text'
+          name="address"
+        />
+      </view>
+      <view class='infoItem'>
+        <text>请输入电话</text>
+        <input
+          bindinput='phoneChange'
+          placeholder='请输入电话'
+          type='number'
+          name="phone"
+        />
+      </view>
+      <view class="section section_gap">
+    <view class="section__title">选择付款方式</view>
+    <radio-group name="radio-group" bindchange="radioChange">
+    <block wx:for="{{paymentTypes}}" wx:key="paymentTypes">
+      <label><radio value="{{item}}"/>{{item}}</label>
+    </block>
+    </radio-group>
+  </view>
+      <button disabled="{{cardList.length==0}}" bindtap='createdOrder'>提交</button>
+    </view>
+  </view> 
+</view>

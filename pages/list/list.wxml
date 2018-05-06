@@ -1,0 +1,101 @@
+<!--pages/list/list.wxml-->
+<view class="categorypage">
+  <view class='header'>
+    <scroll-view scroll-x="true" class='category'>
+      <view class="categoryItem {{categoryId==item.id?'mainBg':''}}" wx:for="{{allCategories}}" wx:key="categoryItem" bindtap='filter' data-id="{{item.id}}">
+        {{item.name}}
+      </view>
+    </scroll-view>
+    <view class='filterWrap'>
+      <view class='filterItem' bindtap='togglePrice'>
+        <text class='mainColor'>价格</text>
+        <view class='sort' wx:if="{{price}}">
+          <image src='../../images/up1.png' class='up1'></image>
+          <image src='../../images/down1.png' class='up1'></image>
+        </view>
+        <view class='sort' wx:else>
+          <image src='../../images/up2.png' class='up1'></image>
+          <image src='../../images/down2.png' class='up1'></image>
+        </view>
+      </view>
+      <view class='filterItem' bindtap='toggleSeller'>
+        <text class='mainColor'>销量</text>
+        <view class='sort' wx:if="{{!sellSort}}">
+          <image src='../../images/up1.png' class='up1'></image>
+          <image src='../../images/down1.png' class='up1'></image>
+        </view>
+        <view class='sort' wx:else>
+          <image src='../../images/up2.png' class='up1'></image>
+          <image src='../../images/down2.png' class='up1'></image>
+        </view>
+      </view>
+      <view class='filterItem' bindtap='toggleBrandsModal'>
+        <text>品牌</text>
+        <view class='sort'>
+          <image src='../../images/down1.png' class='up1'></image>
+        </view>
+      </view>
+      <view class='filterItem' wx:for="{{propertiesData}}" wx:key="propertiesData" bindtap='showModal' data-key="{{item.key}}">
+        <text>{{item.name}}</text>
+        <view class='sort'>
+          <image src='../../images/down1.png' class='up1'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <scroll-view class='discountArea' scroll-y="true">
+    <view class='discountItemWrap'>
+      <view class="discountItem {{(index+1)%2==0?'last':''}}" wx:for="{{listData}}" wx:key="products" wx:for-item="product" data-id="{{product.id}}" bindtap='goDetail'>
+        <view class='imgInfo'>
+          <view class='tagsWrap'>
+            <text wx:for="{{product.tags}}" wx:key="tags" wx:for-item="tags">{{tags}}</text>
+          </view>
+
+          <image src="{{product.image}}" class='images'></image>
+        </view>
+        <view class='itemInfo'>
+          <view class='productInfo'>
+            <text>{{product.name}}</text>
+          </view>
+          <view class='priceInfo'>
+            <text class='platformPrice'>¥{{product.price}}</text>
+            <text class='jdPrice'>京东价:¥{{product.fake_price}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class='filterModal' wx:if="{{filterModal}}">
+    <view class='filterItems'>
+      <view class='filterHeader'>请选择</view>
+      <view class='filterContent'>
+        <checkbox-group bindchange="filtersChange" class="checkGroup">
+  <label class="checkbox" wx:for="{{filterItems}}" wx:key="filterItems">
+    <checkbox value="{{item}}" checked="{{item.checked}}"/>{{item}}
+  </label>
+</checkbox-group>
+      </view>
+      <view class='filterFooter'>
+        <button size="mini" bindtap='filters'>确认</button>
+        <button size="mini" bindtap='toggleFilterModal'>取消</button>
+      </view>
+    </view>
+  </view>
+  <view class='filterModal' wx:if="{{brandsModal}}">
+    <view class='filterItems'>
+      <view class='filterHeader'>请选择</view>
+      <view class='filterContent'>
+        <checkbox-group bindchange="brandsChange" class="checkGroup">
+  <label class="checkbox" wx:for="{{brands}}" wx:key="brands">
+    <checkbox value="{{item.id}}" checked="{{item.checked}}"/>{{item.name}}
+  </label>
+</checkbox-group>
+      </view>
+      <view class='filterFooter'>
+        <button size="mini" bindtap='brandsFilter'>确认</button>
+        <button size="mini" bindtap='toggleBrandsModal'>取消</button>
+      </view>
+    </view>
+  </view>
+</view>

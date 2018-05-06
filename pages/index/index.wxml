@@ -1,0 +1,67 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="indexHeader">
+    <view class='logoContainer'>
+      <view class='logo'>
+        <image src='{{indexData.vendor.logo}}'></image>
+      </view>
+      <view class='textCon'>
+        <view class='title'>{{indexData.vendor.name}}</view>
+        <view class='subTitle'>{{indexData.vendor.subName}}</view>
+      </view>
+    </view>
+    <view class='searchContainer'>
+      <input placeholder='搜索产品名称' wx:if="{{isShowInput}}"></input>
+      <view class='searchIcon' bindtap='showInput'>
+        <image src='../../images/search.png'></image>
+        <view class='title'>搜索</view>
+      </view>
+    </view>
+    <view class='helpContainer'>
+      <view class='hotLine' bindtap='callHotLine'>
+        <image src='../../images/hotLine.png'></image>
+        <view class='title'>购买热线</view>
+      </view>
+      <view class='teamwork'>
+        <image src='../../images/teamwork.png'></image>
+        <view class='title'>资质授权</view>
+      </view>
+    </view>
+  </view>
+  <view class='classContainer'>
+    <view wx:for="{{indexData.categories}}" wx:key="{{index}}" class='classItem'  data-id="{{item.id}}" bindtap='brandsGoList'>
+      <view class='icon'>
+      <image src='{{item.icon}}'></image>
+      </view>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+  <scroll-view sroll-y="true" class='scrollView'>
+<view class='discountArea' wx:for="{{indexData.areas}}" wx:key="area">
+    <view class='innerDiscountArea'>
+    <view class='discountHead'>
+      <text>{{item.name}}</text>
+    </view>
+    <view class='discountCon'>
+      <view class="discountItem" wx:for="{{item.products}}" wx:key="products" wx:for-item="product" data-id="{{product.id}}" bindtap='goDetail'>
+        <view class='imgInfo'>
+        <view>
+        <text wx:for="{{product.tags}}" wx:key="tags" wx:for-item="tags">{{tags}}</text></view>
+          
+          <image src='{{product.image}}'></image>
+        </view>
+        <view class='itemInfo'>
+          <view class='productInfo'>
+            <text>{{product.name}}</text>
+          </view>
+          <view class='priceInfo'>
+            <text class='platformPrice'>¥{{product.price}}</text>
+            <text class='jdPrice'>市场价:¥{{product.price}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    </view>
+  </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,164 @@
+/* pages/list/list.wxss */
+.categorypage{
+  height:100%;
+  background: #f0f0f0;
+}
+.header{
+  height:151rpx;
+  background: #fff;
+}
+.category{
+  width:100%;
+  height:107rpx;
+  line-height:110rpx;
+  padding:0 20rpx;
+  display: flex;
+  white-space: nowrap; 
+}
+.categoryItem{
+  display: inline-block;
+  width:136rpx;
+  height:60rpx;
+  text-align: center;
+  line-height:60rpx;
+  font-size: 24rpx;
+  background: #f4f4f4;
+  border-radius:60rpx;
+  margin-right:24rpx;
+}
+.filterWrap{
+  height:44rpx;
+  display:flex;
+  align-items: flex-start;
+  padding:0 20rpx;
+  font-size: 24rpx;
+}
+.filterItem{
+  margin-right: 20rpx;
+  display:flex;
+}
+.sort{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+}
+.up1{
+  width:10rpx;
+  height:9rpx;
+  margin:3rpx 0rpx 3rpx 8rpx;
+}
+.discountArea{
+  position: absolute;
+  left:0;
+  top:165rpx;
+  right:0;
+  bottom:0;
+  background: #fff;
+}
+.discountItemWrap{
+  padding:20rpx;
+  display: flex;
+  flex-wrap:wrap;
+}
+.discountItem{
+  width:350rpx;
+}
+.discountItem.last{
+   margin-left:10rpx; 
+}
+.imgInfo{
+  width:345rpx;
+  height:345rpx;
+  background:#f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:relative;
+}
+.tagsWrap{
+  position:absolute;
+  left:0rpx;
+  top:1rpx;
+}
+.imgInfo text{
+  background:#bda686;
+  height:30rpx;
+  line-height:30rpx;
+  border-radius:30rpx;
+  color:#fff;
+  font-size:18rpx;
+  padding:0 14rpx;
+  margin:0 8rpx;
+}
+.imgInfo .images{
+  width:307rpx;
+  height:204rpx;
+  margin-top:40rpx;
+}
+.productInfo{
+  font-size: 22rpx;
+  color:#292929;
+  margin-top:8rpx;
+}
+.platformPrice{
+  font-size: 30rpx;
+  margin-right:20rpx;
+}
+.jdPrice{
+  font-size: 20rpx;
+  color:#b4b4b4;
+  text-decoration:line-through;
+}
+.filterModal{
+  position:fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background:rgba(0, 0, 0, 0.5);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.filterItems{
+  width:600rpx;
+  height:800rpx;
+  background:#fff;
+  border-radius:10rpx;
+  display:flex;
+  flex-direction: column;
+}
+.filterHeader{
+  height:90rpx;
+  border-bottom:solid 1rpx #ccc;
+  text-align: center;
+  line-height:90rpx;
+  font-size:36rpx;
+  /* color:#bda686; */
+}
+.filterContent{
+  flex:1;
+  overflow-y: scroll
+}
+.filterFooter{
+  height:120rpx;
+  border-top:solid 1rpx #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.filterFooter button{
+  width:180rpx;
+  height:70rpx;
+  line-height:70rpx;
+  background:#bda686;
+  color:#fff;
+}
+.checkGroup{
+  display:flex;
+  flex-direction: column;
+  padding:20rpx;
+}
+.checkbox{
+  margin-bottom:15rpx;
+}

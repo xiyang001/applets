@@ -1,0 +1,151 @@
+/* pages/card/card.wxss */
+.cardPage{
+  height:100%;
+  background:#f0f0f0;
+  position:relative;
+}
+.cardList{
+  position: absolute;
+  top:0;
+  right:0;
+  bottom:100rpx;
+  left:0;
+}
+.listItem{
+  display: flex;
+  height:202rpx;
+  border-bottom:solid 1rpx #f1c191;
+  background:#fff;
+}
+.listItem.last{
+  border-bottom:0;
+}
+.imgInfo{
+  width:193rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageWrap{
+  width:160rpx;
+  height:160rpx;
+  background: #ccc;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageWrap image{
+  width:119rpx;
+  height:75rpx;
+
+}
+.itemInfo{
+  display: flex;
+  flex:1;
+  flex-direction: column;
+  justify-content: space-between;
+  padding:20rpx;
+}
+.itemInfo .name{
+  font-size: 22rpx;
+}
+.itemInfo .price{
+  display: flex;
+}
+.priceText{
+  width:190rpx;
+}
+.quantity{
+   flex:1;
+}
+.quantity image{
+  width:32rpx;
+  height:32rpx;
+}
+.quantity text{
+  margin:0 15rpx;
+  font-size: 30rpx;
+  vertical-align:4rpx;
+}
+.delete{
+  width:105rpx;
+  height:50rpx;
+  text-align: center;
+  line-height:50rpx;
+  border: solid 1rpx #f4c493;
+  border-radius:50rpx;
+  color:#f4c493;
+  font-size: 30rpx; 
+}
+.operating{
+  width:100%;
+  height:96rpx;
+  position: absolute;
+  left:0;
+  bottom:0;
+  background:#fff;
+  display: flex;
+  align-items: center;
+}
+.amount{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  font-size: 30rpx;
+}
+.amount text{
+  color:#f1c191;
+}
+.confirmOrder{
+  width:460rpx;
+  height:96rpx;
+  background: #181818;
+  color:#f1c191;
+  line-height:96rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+.popups{
+  position:fixed;
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+  background:rgba(0,0,0,.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:22rpx;
+}
+.orderInfo{
+  width:540rpx;
+  height:500rpx;
+  background:#fff;
+  border-radius:8rpx;
+  box-sizing:border-box;
+  padding:120rpx 30rpx 30rpx;
+}
+.infoItem{
+  display: flex;
+  margin-bottom:20rpx;
+}
+.infoItem text{
+  display:flex;
+  align-items: center;
+  
+}
+.infoItem input{
+  flex:1;
+  border-bottom:solid 1rpx #ccc;
+  padding-left:8rpx;
+}
+.orderInfo button{
+  width:200rpx;
+  height:60rpx;
+  line-height:60rpx;
+  border-radius:60rpx;
+  background:transparent;
+  border:solid 1rpx #000;
+  font-size:22rpx;
+  margin-top:100rpx;
+}

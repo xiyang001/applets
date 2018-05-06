@@ -1,0 +1,180 @@
+.container{
+  display:flex;
+  flex-direction: column
+}
+.indexHeader {
+  width: 100%;
+  display: flex;
+  height:96rpx;
+  background: #181818;
+  color: #fff;
+  padding:0 25rpx;
+  box-sizing: border-box;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoContainer .logo {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 60rpx;
+  margin-right:18rpx;
+}
+.logoContainer .logo image{
+  width:100%;
+  height:100%;
+}
+.logoContainer .textCon{
+   display:flex;
+   flex-direction: column;
+   justify-content:center;
+}
+.logoContainer .textCon .title{
+  font-size:30rpx;
+  color:#f9c795;
+}
+.logoContainer .textCon .subTitle{
+  font-size: 18rpx;
+  color:#bda686;
+}
+.searchContainer,.helpContainer{
+  display: flex;
+  align-items: center;
+}
+.searchContainer{
+  flex:1;
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 8rpx;
+}
+.searchContainer input{
+  border-bottom:solid 1px #f9c795;
+  font-size: 24rpx;
+}
+.searchIcon{
+  width:64rpx;
+  text-align: center;
+}
+.searchIcon .title{
+  font-size: 18rpx;
+  color:#f9c795;
+  text-align: center;
+}
+.searchIcon image{
+  width:35rpx;
+  height:32rpx;
+}
+.helpContainer{
+  width:177rpx;
+  text-align: center;
+}
+.hotLine{
+  width:91rpx;
+}
+.hotLine image{
+  width:34rpx;
+  height:34rpx;
+}
+.helpContainer .title{
+  font-size: 18rpx;
+  color:#f9c795;
+  text-align: center;
+}
+.teamwork{
+  width:86rpx;
+}
+.teamwork image{
+  width:41rpx;
+  height:39rpx;
+}
+.classContainer{
+  height:300rpx;
+  background:#fff;
+  display:flex;
+  flex-wrap:wrap;
+  margin-top:14rpx;
+  padding-top:20rpx;
+}
+.classItem{
+  text-align: center;
+  width:150rpx;
+  height:120rpx;
+}
+.classItem .icon{
+  height:88rpx;
+  width:88rpx;
+  border-radius:88rpx;
+  background: #bda686;
+  margin:0 auto;
+}
+.icon image{
+  width:100%;
+  height:100%;
+}
+.classItem text{
+  font-size:26rpx;
+  color:#404040;
+}
+.scrollView{
+  flex:1;
+}
+.discountArea{
+  margin-top:14rpx;
+  /* padding-left:14rpx; */
+}
+.innerDiscountArea{
+  background:#fff;
+}
+.discountHead{
+  height:80rpx;
+  border-bottom:solid 1rpx #bda686;
+  padding-left:24rpx;
+  padding-top:10rpx;
+}
+.discountCon{
+  padding:22rpx 0 22rpx 14rpx;
+}
+.discountItem{
+  display:inline-block;
+  width:358rpx;
+  height:443rpx;
+  padding-left:4rpx;
+}
+.imgInfo{
+  width:345rpx;
+  height:345rpx;
+  background:#f7f7f7;
+}
+.imgInfo text{
+  background:#bda686;
+  height:30rpx;
+  line-height:30rpx;
+  border-radius:30rpx;
+  color:#fff;
+  font-size:18rpx;
+  padding:0 14rpx;
+  margin:0 8rpx;
+}
+.imgInfo image{
+  width:307rpx;
+  height:204rpx;
+  margin-top:40rpx;
+  margin-left: 20rpx;
+}
+.productInfo{
+  font-size: 22rpx;
+  color:#292929;
+  margin-top:8rpx;
+}
+.platformPrice{
+  font-size: 30rpx;
+  margin-right:20rpx;
+}
+.jdPrice{
+  font-size: 20rpx;
+  color:#b4b4b4;
+  text-decoration:line-through;
+}

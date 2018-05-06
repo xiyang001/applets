@@ -1,0 +1,19 @@
+/**app.wxss**/
+@import "/wxParse/wxParse.wxss";
+page{
+  height:100%;
+}
+.container {
+  display: flex;
+  min-height:100%;
+  flex-direction: column;
+  background:#f0f0f0;
+  overflow-x:hidden;
+} 
+.mainColor{
+  color:#bda686;
+}
+.mainBg{
+  color:#fff;
+  background:#bda686 !important;
+}

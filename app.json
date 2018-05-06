@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/list/list",
+    "pages/detail/detail",
+    "pages/shopping/shopping",
+    "pages/card/card"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#181818",
+    "navigationBarTitleText": "金牌采购",
+    "navigationBarTextStyle": "#fff",
+    "backgroundColor": "#f0f0f0"
+  },
+  "tabBar": {
+    "backgroundColor": "#181818",
+    "color": "#dab273",
+    "selectedColor": "#fafa9e",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"images/home.png",
+        "selectedIconPath":"images/homeSelect.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "分类",
+        "iconPath": "images/classify.png",
+        "selectedIconPath": "images/classifyOn.png"
+      },
+      {
+        "pagePath": "pages/shopping/shopping",
+        "text": "场景化购物",
+        "iconPath": "images/scenarioShopping.png",
+        "selectedIconPath": "images/scenarioShopping.png"
+      }
+    ]
+  }
+}
