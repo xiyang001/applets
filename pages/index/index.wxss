@@ -101,7 +101,7 @@
 .classItem{
   text-align: center;
   width:150rpx;
-  height:120rpx;
+  /*height:120rpx;*/
   font-size: 24rpx;
   font-weight: 700;
 }
@@ -111,6 +111,7 @@
   border-radius:88rpx;
   background: #bda686;
   margin:0 auto;
+  overflow:hidden;
 }
 .icon image{
   width:100%;
