@@ -46,7 +46,7 @@
       <view class="discountItem" wx:for="{{item.products}}" wx:key="products" wx:for-item="product" data-id="{{product.id}}" bindtap='goDetail'>
         <view class='imgInfo'>
         <view>
-        <text wx:for="{{product.tags}}" wx:key="tags" wx:for-item="tags">{{tags}}</text></view>
+        <text class='tagInfo' wx:for="{{product.tags}}" wx:key="tags" wx:for-item="tags">{{tags}}</text></view>
           
           <image src='{{product.image}}'></image>
         </view>

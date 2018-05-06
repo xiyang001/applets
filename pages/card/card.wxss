@@ -47,13 +47,16 @@
   padding:20rpx;
 }
 .itemInfo .name{
-  font-size: 22rpx;
+  font-size: 24rpx;
+  font-weight:700;
 }
 .itemInfo .price{
   display: flex;
+  font-size: 32rpx;
 }
 .priceText{
   width:190rpx;
+  font-weight:700;
 }
 .quantity{
    flex:1;
@@ -64,7 +67,8 @@
 }
 .quantity text{
   margin:0 15rpx;
-  font-size: 30rpx;
+  font-size:30rpx;
+  font-weight:700;
   vertical-align:4rpx;
 }
 .delete{
@@ -91,7 +95,8 @@
   flex: 1;
   display: flex;
   justify-content: center;
-  font-size: 30rpx;
+  font-size: 32rpx;
+  font-weight:700;
 }
 .amount text{
   color:#f1c191;
@@ -124,6 +129,8 @@
   border-radius:8rpx;
   box-sizing:border-box;
   padding:120rpx 30rpx 30rpx;
+  font-size: 24rpx;
+  font-weight:700;
 }
 .infoItem{
   display: flex;
@@ -132,6 +139,8 @@
 .infoItem text{
   display:flex;
   align-items: center;
+  font-size:24rpx;
+  font-weight:700;
   
 }
 .infoItem input{

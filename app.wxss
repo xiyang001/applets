@@ -16,4 +16,5 @@ page{
 .mainBg{
   color:#fff;
   background:#bda686 !important;
+  font-weight:700;
 }

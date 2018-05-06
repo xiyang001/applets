@@ -31,7 +31,8 @@
   display:flex;
   align-items: flex-start;
   padding:0 20rpx;
-  font-size: 24rpx;
+  font-size: 28rpx;
+  font-weight:700;
 }
 .filterItem{
   margin-right: 20rpx;
@@ -79,6 +80,8 @@
   position:absolute;
   left:0rpx;
   top:1rpx;
+  font-size:20rpx;
+  font-weight:700;
 }
 .imgInfo text{
   background:#bda686;
@@ -96,7 +99,8 @@
   margin-top:40rpx;
 }
 .productInfo{
-  font-size: 22rpx;
+  font-size: 24rpx;
+  font-weight:700;
   color:#292929;
   margin-top:8rpx;
 }

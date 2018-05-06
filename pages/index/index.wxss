@@ -102,6 +102,8 @@
   text-align: center;
   width:150rpx;
   height:120rpx;
+  font-size: 24rpx;
+  font-weight: 700;
 }
 .classItem .icon{
   height:88rpx;
@@ -165,9 +167,10 @@
   margin-left: 20rpx;
 }
 .productInfo{
-  font-size: 22rpx;
+  font-size: 24rpx;
   color:#292929;
   margin-top:8rpx;
+  font-weight:700;
 }
 .platformPrice{
   font-size: 30rpx;
@@ -177,4 +180,8 @@
   font-size: 20rpx;
   color:#b4b4b4;
   text-decoration:line-through;
+}
+.tagInfo{
+  font-size:20rpx;
+  font-weight:700;
 }
